@@ -19,10 +19,10 @@ jobs:
       - checkout
       - run:
           name: Run Docker container
-          command: docker run -d -p 3000:3000 node-js-sample
+          command: docker run -d -p 8080:8080 node-js-sample
       - run:
           name: Test application
-          command: curl -f http://localhost:3000
+          command: curl -f http://localhost:8080
 
   deploy:
     docker:
